@@ -13,25 +13,27 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[80px]">
           <div className="flex items-center">
-            <span className="text-white text-2xl font-bold">Wattify</span>
+            <span className="text-white text-2xl font-bold font-urbanist">
+              Wattify
+            </span>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-9">
               <a
                 href="#"
-                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium font-urbanist"
               >
                 Documentation
               </a>
               <a
                 href="#"
-                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium font-urbanist"
               >
                 Status
               </a>
               <a
                 href="#"
-                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium font-urbanist"
               >
                 About
               </a>
@@ -57,19 +59,19 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="#"
-              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium font-urbanist"
             >
               Documentation
             </a>
             <a
               href="#"
-              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium font-urbanist"
             >
               Status
             </a>
             <a
               href="#"
-              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
+              className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium font-urbanist"
             >
               About
             </a>

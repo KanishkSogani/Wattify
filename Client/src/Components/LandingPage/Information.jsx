@@ -5,7 +5,7 @@ const Information = () => {
   const infoCards = [
     {
       icon: Clock,
-      title: "Real-Time, History, Forecast",
+      title: "Real-Time, History",
       description:
         "Our API covers global weather data across the board — from a multi-year history all the way to live information.",
     },
