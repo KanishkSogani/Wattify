@@ -30,14 +30,16 @@ const HeroCard = () => {
         </div>
         <div className="text-center sm:text-left">
           <div className="text-xs text-white mt-2">
-            Min Load: <span className="text-white font-semibold"> 432 kWh</span>
+            Min Load:{" "}
+            <span className="text-white font-semibold"> 3800 kWh</span>
           </div>
           <div className="text-xs text-white mt-2">
-            Avg Load: <span className="text-white font-semibold"> 432 kWh</span>
+            Avg Load:{" "}
+            <span className="text-white font-semibold"> 4820 kWh</span>
           </div>
           <div className="text-xs text-white mt-2">
             Peak Load:{" "}
-            <span className="text-white font-semibold"> 432 kWh</span>
+            <span className="text-white font-semibold"> 6120 kWh</span>
           </div>
         </div>
       </div>
@@ -59,7 +61,7 @@ const HeroCard = () => {
             alt="Temperature"
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
-          <p className="text-xs text-white font-bold">27°C</p>
+          <p className="text-xs text-white font-bold">33°C</p>
         </div>
         <div className="p-2 rounded h-[100px] w-[100px] flex flex-col justify-center items-center">
           <h3 className="text-xs font-semibold text-white">Humidity</h3>

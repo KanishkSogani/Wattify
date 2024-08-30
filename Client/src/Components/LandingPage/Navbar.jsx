@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[80px]">
           <div className="flex items-center">
+            <img
+              src={logo}
+              alt="wattify-logo"
+              height={25}
+              width={25}
+              className="mr-1"
+            />
             <span className="text-white text-2xl font-bold font-urbanist">
               Wattify
             </span>

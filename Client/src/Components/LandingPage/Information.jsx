@@ -1,31 +1,31 @@
 import InfoCard from "./InfoCard";
-import { Clock, Globe, Server, Zap } from "lucide-react";
+import { Cloud, BarChart2, DollarSign, Zap } from "lucide-react";
 
 const Information = () => {
   const infoCards = [
     {
-      icon: Clock,
-      title: "Real-Time, History",
+      icon: Cloud,
+      title: "Weather impact analysis",
       description:
-        "Our API covers global weather data across the board — from a multi-year history all the way to live information.",
+        "Our AI model incorporates real-time and historical weather data, analyzing its impact on power demands.",
     },
     {
-      icon: Globe,
-      title: "Millions of Locations",
+      icon: BarChart2,
+      title: "Load balancing",
       description:
-        "Make use of live or hour-by-hour weather data for millions of cities and towns worldwide, supporting sdfa sf.",
+        "Using advanced AI algorithms, load will be evenly distributed, preventing losses due to instability.",
     },
     {
-      icon: Server,
-      title: "Rock-Solid Uptime & Speed",
+      icon: DollarSign,
+      title: "Adaptive power purchasing",
       description:
-        "Powered by best-in-class cloud infrastructure, our API delivers data in milliseconds around the clock with an uptime of nearly 100%.",
+        "Even distribution of load across multiple grids using AI provides an edge in purchasing power at optimal rates.",
     },
     {
       icon: Zap,
-      title: "Start Free, Upgrade Later",
+      title: "Dynamic load forecasting",
       description:
-        "Start testing the API immediately by signing up for our Free Plan. You can always upgrade later — no strings attached.",
+        "Using historical trends and forecasted data of multiple parameters provides an efficient load prediction.",
     },
   ];
 

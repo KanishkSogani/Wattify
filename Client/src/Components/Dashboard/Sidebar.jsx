@@ -15,7 +15,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className="py-3 md:py-5 px-6 md:px-10 h-full flex flex-col">
         <div className="flex justify-between items-center">
           <h1
-            className="text-lg md:text-2xl font-semibold cursor-pointer"
+            className="text-lg md:text-2xl font-bold cursor-pointer"
             onClick={() => navigate("/")}
           >
             Wattify

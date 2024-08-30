@@ -1,13 +1,13 @@
-import { Cloud, Clock, Sun, MapPin } from "lucide-react";
+import { Cloud, Calendar, TrendingUp, Building } from "lucide-react";
 import delhimap from "../../assets/delhimap.png";
 import FeatureItem from "./FeatureItem";
 
 const Features = () => {
   const features = [
-    { icon: Cloud, text: "Real-Time Weather API" },
-    { icon: Clock, text: "Historical Weather API" },
-    { icon: Sun, text: "Weather Forecasts API" },
-    { icon: MapPin, text: "Location Autocomplete" },
+    { icon: Cloud, text: "Weather effect" },
+    { icon: Calendar, text: "Public holidays/ weekly holidays" },
+    { icon: TrendingUp, text: "Natural load growth" },
+    { icon: Building, text: "Real estate development" },
   ];
 
   return (
@@ -16,11 +16,11 @@ const Features = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-[460px] mb-8 md:mb-0">
             <h2 className="md:text-[32px] text-[20px] font-semibold leading-[1.25]">
-              Access to Global Weather Data, Developer-friendly
+              Dynamic Load Forecasting for Delhi through AI
             </h2>
             <p className="mt-4 md:text-[20px] text-[16px] leading-[1.25]">
-              Get instant access to accurate weather data for any geo-point in
-              the world and enjoy a rich set of capabilities:
+              Get instant access to accurate load prediction for Delhi on
+              various parameters:
             </p>
             <div className="mt-6">
               {features.map((feature, index) => (
