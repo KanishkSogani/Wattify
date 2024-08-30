@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   LineChart,
   Line,
@@ -8,26 +9,76 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import Loader from "../../utils/Loader";
+import { toastError } from "../../utils/toastWrapper";
 
 const DashboardContent = () => {
   const [activeSection, setActiveSection] = useState("Daily");
   const [graphData, setGraphData] = useState([]);
-
-  const cards = [
-    { title: "Prediction", value: 5572 },
-    { title: "Peak Load", value: 6608 },
-    { title: "Min Load", value: 4205 },
-    { title: "Avg Load", value: 5158 },
-  ];
+  const [cardData, setCardData] = useState({
+    prediction: 0,
+    peakLoad: 0,
+    minLoad: 0,
+    avgLoad: 0,
+  });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Generate 24-hour prediction data
-    const newData = Array.from({ length: 24 }, (_, i) => ({
-      time: `${i.toString().padStart(2, "0")}:00`,
-      prediction: Math.floor(Math.random() * (6000 - 4000 + 1)) + 4000, // Random value between 4000 and 6000
-    }));
-    setGraphData(newData);
-  }, []); // Run only once on component mount
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/weather");
+        console.log("API response:", response.data);
+
+        const { mlData, mlData24 } = response.data.data;
+
+        if (mlData && mlData24) {
+          setCardData({
+            prediction: Math.round(mlData.prediction) || 0,
+            peakLoad: Math.round(mlData24.max_load) || 0,
+            minLoad: Math.round(mlData24.min_load) || 0,
+            avgLoad: Math.round(mlData24.average) || 0,
+          });
+
+          // Transform mlData24.prediction into the format needed for the graph
+          if (Array.isArray(mlData24.prediction)) {
+            const graphData = mlData24.prediction.map((value, index) => ({
+              time: `${index.toString().padStart(2, "0")}:00`,
+              prediction: Math.round(value) || 0,
+            }));
+            setGraphData(graphData);
+          } else {
+            console.error(
+              "mlData24.prediction is not an array:",
+              mlData24.prediction
+            );
+            setGraphData([]);
+          }
+        } else {
+          console.error("mlData or mlData24 is missing from the API response");
+          toastError("Incomplete data received from the server");
+        }
+
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+        toastError("Failed to fetch weather data");
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  const cards = [
+    { title: "Prediction", value: cardData.prediction },
+    { title: "Peak Load", value: cardData.peakLoad },
+    { title: "Min Load", value: cardData.minLoad },
+    { title: "Avg Load", value: cardData.avgLoad },
+  ];
 
   return (
     <div className="p-4">
