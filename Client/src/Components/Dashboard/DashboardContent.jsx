@@ -60,8 +60,8 @@ const DashboardContent = () => {
 
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching weather data:", error);
-        toastError("Failed to fetch weather data");
+        console.error("Error fetching Prediction data:", error);
+        toastError("Failed to fetch Prediction data");
         setLoading(false);
       }
     };

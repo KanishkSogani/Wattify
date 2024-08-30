@@ -29,7 +29,7 @@ const HeroCard = () => {
         setLoading(false);
       } catch (error) {
         console.error(error);
-        toastError("Failed to fetch weather data");
+        toastError("Failed to fetch Prediction data");
         setLoading(false);
       }
     };
@@ -37,7 +37,7 @@ const HeroCard = () => {
   }, []);
 
   if (loading) {
-    return <Loader />; // Use the new Loader component
+    return <Loader />;
   }
 
   if (!data) {
