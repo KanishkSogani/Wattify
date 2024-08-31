@@ -1,0 +1,20 @@
+{
+  "name": "sih2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -L -r dotenv/config --experimental-modules index.js"
+  },
+  "author": "Prakhar",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "openmeteo": "^1.1.4"
+  }
+}
