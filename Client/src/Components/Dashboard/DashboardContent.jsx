@@ -70,7 +70,11 @@ const DashboardContent = () => {
   }, []);
 
   if (loading) {
-    return <Loader />;
+    return (
+      <div className="flex justify-center h-[100vh] items-center">
+        <Loader />;
+      </div>
+    );
   }
 
   const cards = [
