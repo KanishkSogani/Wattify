@@ -29,7 +29,10 @@ const HeroCard = () => {
         setLoading(false);
       } catch (error) {
         console.error(error);
-        toastError("Failed to fetch Prediction data");
+        toastError(
+          "AI Model is currently not hosted online resulting in 0 value"
+        );
+        alert("AI Model is currently not hosted online resulting in 0 value");
         setLoading(false);
       }
     };
@@ -40,11 +43,11 @@ const HeroCard = () => {
     return <Loader />;
   }
 
-  if (!data) {
-    return null;
-  }
+  // if (!data) {
+  //   return null;
+  // }
 
-  const { mlData, mlData24, current } = data;
+  // const { mlData, mlData24, current } = data;
 
   return (
     <div className="w-[350px] md:w-[500px] h-auto min-h-[300px] border-4 border-[#23699D] bg-[#044775] p-4 flex flex-col rounded-xl">
@@ -56,26 +59,26 @@ const HeroCard = () => {
           <Lottie options={windmillOptions} height={120} width={120} />
         </div>
         <div className="text-3xl font-bold text-white text-center sm:text-left">
-          {Math.round(mlData.prediction)}
+          {/* {Math.round(mlData.prediction)} */} 0
           <span className="text-2xl text-[#C3C3CF]">kWh</span>
         </div>
         <div className="text-center sm:text-left">
           <div className="text-xs text-white mt-2">
             Min Load:{" "}
             <span className="text-white font-semibold">
-              {Math.round(mlData24.min_load)} kWh
+              {/* {Math.round(mlData24.min_load)} kWh */} 0 kWh
             </span>
           </div>
           <div className="text-xs text-white mt-2">
             Avg Load:{" "}
             <span className="text-white font-semibold">
-              {Math.round(mlData24.average)} kWh
+              {/* {Math.round(mlData24.average)} kWh */} 0 kWh
             </span>
           </div>
           <div className="text-xs text-white mt-2">
             Peak Load:{" "}
             <span className="text-white font-semibold">
-              {Math.round(mlData24.max_load)} kWh
+              {/* {Math.round(mlData24.max_load)} kWh */} 0 kWh
             </span>
           </div>
         </div>
@@ -89,7 +92,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {Math.round(current.windspeed)}kph
+            {/* {Math.round(current.windspeed)}kph */} 0 kph
           </p>
         </div>
         <div className="p-2 rounded h-[100px] w-[100px] flex flex-col justify-center items-center">
@@ -100,7 +103,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {Math.round(current.temp)}°C
+            {/* {Math.round(current.temp)}°C */} 0°C
           </p>
         </div>
         <div className="p-2 rounded h-[100px] w-[100px] flex flex-col justify-center items-center">
@@ -111,7 +114,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {Math.round(current.humidity)}%
+            {/* {Math.round(current.humidity)}% */} 0%
           </p>
         </div>
       </div>
