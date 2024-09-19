@@ -29,9 +29,9 @@ const HeroCard = () => {
         setLoading(false);
       } catch (error) {
         console.error(error);
-        toastError(
-          "Our AI model is currently not hosted online, which is causing the values to display as 0."
-        );
+        // toastError(
+        //   "Our AI model is currently not hosted online, which is causing the values to display as 0."
+        // );
         alert(
           "Our AI model is currently not hosted online, which is causing the values to display as 0."
         );

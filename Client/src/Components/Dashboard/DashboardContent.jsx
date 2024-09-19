@@ -61,10 +61,12 @@ const DashboardContent = () => {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching Prediction data:", error);
-        toastError(
+        // toastError(
+        //   "Our AI model is currently not hosted online, which is causing the values to display as 0."
+        // );
+        alert(
           "Our AI model is currently not hosted online, which is causing the values to display as 0."
         );
-        alert("Our AI model is currently not hosted online, which is causing the values to display as 0.");
         setLoading(false);
       }
     };
