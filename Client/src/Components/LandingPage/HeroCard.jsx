@@ -32,9 +32,6 @@ const HeroCard = () => {
         // toastError(
         //   "Our AI model is currently not hosted online, which is causing the values to display as 0."
         // );
-        alert(
-          "Our AI model is currently not hosted online, which is causing the values to display as 0."
-        );
         setLoading(false);
       }
     };
@@ -61,26 +58,26 @@ const HeroCard = () => {
           <Lottie options={windmillOptions} height={120} width={120} />
         </div>
         <div className="text-3xl font-bold text-white text-center sm:text-left">
-          {/* {Math.round(mlData.prediction)} */} 0
+          {/* {Math.round(mlData.prediction)} */} 5572
           <span className="text-2xl text-[#C3C3CF]">kWh</span>
         </div>
         <div className="text-center sm:text-left">
           <div className="text-xs text-white mt-2">
             Min Load:{" "}
             <span className="text-white font-semibold">
-              {/* {Math.round(mlData24.min_load)} kWh */} 0 kWh
+              {/* {Math.round(mlData24.min_load)} kWh */} 4205 kWh
             </span>
           </div>
           <div className="text-xs text-white mt-2">
             Avg Load:{" "}
             <span className="text-white font-semibold">
-              {/* {Math.round(mlData24.average)} kWh */} 0 kWh
+              {/* {Math.round(mlData24.average)} kWh */} 5158 kWh
             </span>
           </div>
           <div className="text-xs text-white mt-2">
             Peak Load:{" "}
             <span className="text-white font-semibold">
-              {/* {Math.round(mlData24.max_load)} kWh */} 0 kWh
+              {/* {Math.round(mlData24.max_load)} kWh */} 6608 kWh
             </span>
           </div>
         </div>
@@ -94,7 +91,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {/* {Math.round(current.windspeed)}kph */} 0 kph
+            {/* {Math.round(current.windspeed)}kph */} 6 kph
           </p>
         </div>
         <div className="p-2 rounded h-[100px] w-[100px] flex flex-col justify-center items-center">
@@ -105,7 +102,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {/* {Math.round(current.temp)}°C */} 0°C
+            {/* {Math.round(current.temp)}°C */} 33°C
           </p>
         </div>
         <div className="p-2 rounded h-[100px] w-[100px] flex flex-col justify-center items-center">
@@ -116,7 +113,7 @@ const HeroCard = () => {
             className="w-[31px] h-[31px] mt-1 mb-1"
           />
           <p className="text-xs text-white font-bold">
-            {/* {Math.round(current.humidity)}% */} 0%
+            {/* {Math.round(current.humidity)}% */} 68%
           </p>
         </div>
       </div>
